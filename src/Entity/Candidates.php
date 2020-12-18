@@ -3,10 +3,11 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use ApiPlatform\Core\Annotation\ApiResource;
 
 /**
  * Candidates
- *
+ * @ApiResource
  * @ORM\Table(name="candidates", indexes={@ORM\Index(name="cv_id", columns={"cv_id"}), @ORM\Index(name="current_situation_id", columns={"current_situation_id"})})
  * @ORM\Entity
  */
