@@ -71,6 +71,13 @@ class Companies
      */
     private $businessSectorId;
 
+    /**
+     * @var string Image of the companie
+     *
+     * @ORM\Column(name="image", type="string", nullable=true)
+     */
+    public $image;
+
     public function getCompanyId(): ?string
     {
         return $this->companyId;
