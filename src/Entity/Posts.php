@@ -24,7 +24,6 @@ class Posts
 
     /**
      * @var \DateTime
-     *
      * @ORM\Column(name="posted_at", type="date", nullable=false)
      */
     private $postedAt;
