@@ -13,6 +13,15 @@ use ApiPlatform\Core\Annotation\ApiResource;
  */
 class BusinessSectors
 {
+
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="business_sector_id", type="bigint", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $businessSectorId;
     /**
      * @var string
      *
@@ -20,17 +29,11 @@ class BusinessSectors
      */
     private $name;
 
-    /**
-     * @var \Companies
-     *
-     * @ORM\Id
-     * @ORM\GeneratedValue(strategy="NONE")
-     * @ORM\OneToOne(targetEntity="Companies")
-     * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="business_sector_id", referencedColumnName="business_sector_id")
-     * })
-     */
-    private $businessSector;
+    public function getPostId(): ?string
+    {
+        return $this->postId;
+    }
+
 
     public function getName(): ?string
     {
@@ -44,17 +47,7 @@ class BusinessSectors
         return $this;
     }
 
-    public function getBusinessSector(): ?Companies
-    {
-        return $this->businessSector;
-    }
 
-    public function setBusinessSector(?Companies $businessSector): self
-    {
-        $this->businessSector = $businessSector;
-
-        return $this;
-    }
 
 
 }
