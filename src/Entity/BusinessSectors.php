@@ -29,9 +29,9 @@ class BusinessSectors
      */
     private $name;
 
-    public function getPostId(): ?string
+    public function getBusinessSectorId(): ?string
     {
-        return $this->postId;
+        return $this->businessSectorId;
     }
 
 
